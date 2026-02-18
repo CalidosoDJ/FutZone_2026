@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="CSS/crear_cancha.css">
+    <link rel="shortcut icon" href="/CanchaApp/icons/futbol-americano.png" type="image/x-icon">
+
+    <title>Crear Canchas</title>
+</head>
+
+<body>
+
+<header>
+    <h1>⚽ Crear y Publicar Cancha</h1>
+    <nav>
+        <a href="homepage.html">Inicio</a> |
+        <a href="iniciarsec.html">Iniciar sesión</a> |
+        <a href="calendario.html">Calendario</a> |
+        <a href="mapa.html">Mapa</a> |
+        <a href="#">Noticias</a> |
+        <a href="registrar.html">Registrarse</a> |
+        <a href="#">¿Quiénes somos?</a>
+    </nav>
+</header>
+
+<main>
+    <form id="formCancha">
+
+        <label>Nombre de la cancha:</label>
+        <input type="text" id="nombre" placeholder="Ej: Cancha Sintética Los Pinos" required>
+
+        <label>ID de la cancha:</label>
+        <input type="text" id="idCancha" placeholder="Ej: CAN001" required>
+
+        <label>Dirección y ubicación geográfica:</label>
+        <input type="text" id="direccion" placeholder="Ej: Calle 10 #45 - 23, Popayán" required>
+
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6853.576395212212!2d-76.61427298272118!3d2.4449642517286723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2sco!4v1759793174107!5m2!1ses-419!2sco"
+            height="350"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <label>Tipo de cancha:</label>
+        <select id="tipo" required>
+            <option value="">Seleccione una opción</option>
+            <option>Fútbol 6</option>
+            <option>Fútbol 8</option>
+            <option>Fútbol 10</option>
+            <option>Otro</option>
+        </select>
+
+        <label>Medidas y superficie:</label>
+        <input type="text" id="medidas" placeholder="Ej: 25x50m - Césped Sintético">
+
+        <label>Horarios de disponibilidad:</label>
+        <input type="text" id="horario" placeholder="Ej: Lunes a Domingo 6am - 10pm">
+
+        <label>Precio por hora (COP):</label>
+        <input type="number" id="precio" placeholder="50000" required>
+
+        <label>Fotografías de la cancha (opcional):</label>
+        <input type="file" id="fotos" accept="image/*" multiple>
+
+        <label>Estado:</label>
+        <select id="estado" required>
+            <option>Activa</option>
+            <option>Inactiva</option>
+        </select>
+
+        <button type="submit">📢 Publicar Cancha</button>
+
+        <p id="mensaje"></p>
+    </form>
+
+    <section class="listaCanchas">
+        <h2>📌 Canchas Publicadas</h2>
+        <div id="contenedorCanchas"></div>
+    </section>
+
+</main>
+
+<script src="js/crear_canchas.js"></script>
+</body>
+</html>

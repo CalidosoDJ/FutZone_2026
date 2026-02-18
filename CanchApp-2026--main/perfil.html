@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/perfil.css">
+    <link rel="shortcut icon" href="/icons/futbol-americano.png" type="image/x-icon">
+    <title>Perfil de Usuario</title>
+</head>
+<body>
+  
+<header>
+    <h1>👤 Mi Perfil</h1>
+    <nav>
+      <a href="homepage.html">Inicio</a> |
+      <a href="iniciarsec.html">Iniciar sesión</a> |
+      <a href="#">Calendario</a> |
+      <a href="#">Mapa</a> |
+      <a href="#">Noticias</a> |
+      <a href="registrar.html">Registrarse</a> |
+      <a href="#">¿Quiénes somos?</a>
+    </nav>
+  </header>
+
+<main>
+  <section>
+    <img src="/img/perfil.jpg" alt="Foto de perfil" id="img">
+    <h2>Duvan Joaqui Mamian</h2>
+    <h3>Jugador</h3>
+    <p>joaquiduvan61@gmai.com</p>
+    <button>Editar Perfil</button>
+  </section>
+
+  <section id="editar">
+    <h3>Editar Información</h3>
+    <form>
+      <label>Nombre:</label><br>
+      <input type="text" value="Duvan Joaqui"><br><br>
+
+      <label>Correo:</label><br>
+      <input type="email" value="duvan@email.com"><br><br>
+
+      <label>Nueva foto (JPG-PNG):</label><br>
+      <input type="file"><br><br>
+        <p class="mb"><small>El archivo debe pesar solamente 5mb</small></p>
+      <button type="submit">Guardar Cambios</button>
+      <button type="button">Cancelar</button>
+      
+    </form>
+  </section>
+</main>
+<script src="js/perfil.js"></script>
+
+</body>
+</html>

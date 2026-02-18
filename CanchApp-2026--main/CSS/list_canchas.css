@@ -1,0 +1,261 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('../IMG/fondo_cesped.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #81f165, #3cb371);
+  text-align: center;
+  padding: 20px 10px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.titulo-header {
+  text-align: center;
+  flex: 1;
+}
+
+.perfil-usuario {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.perfil-usuario:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.icono-perfil {
+  font-size: 28px;
+  background: white;
+  color: #2e8b57;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.datos-perfil {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.nombre-usuario {
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+}
+
+.rol-usuario {
+  font-size: 12px;
+  color: #eaffea;
+  font-weight: 600;
+}
+
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00c853;
+}
+
+
+.filtros {
+  background: rgba(255, 255, 255, 0.92);
+  width: 90%;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+.filtros h2 {
+  color: #2e8b57;
+  margin-bottom: 15px;
+}
+
+.filtros form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.filtros label {
+  font-weight: 600;
+}
+
+.filtros input,
+.filtros select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 80%;
+}
+
+.filtros button {
+  background: #48c774;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filtros button:hover {
+  background: #3aa663;
+}
+
+.canchas {
+  background: rgba(255, 255, 255, 0.93);
+  width: 90%;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.canchas h2 {
+  color: #2e8b57;
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+}
+.canchas p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+.card .imagen {
+  width: 40%;
+  max-width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.card .info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 55%;
+}
+
+.info li {
+  margin: 8px 0;
+}
+
+.info a.tel {
+  color: #48c774;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.info a.tel:hover {
+  text-decoration: underline;
+}
+
+.botones {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.botones button {
+  flex: 1;
+  background: #48c774;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: bold;
+}
+
+.botones .llegar {
+  background: #3aa663;
+}
+
+.botones button:hover {
+  background: #2e8b57;
+}
+
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card .imagen {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  .card .info {
+    width: 100%;
+  }
+
+  .botones {
+    flex-direction: column;
+  }
+}

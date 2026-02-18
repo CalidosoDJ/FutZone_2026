@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar CanchApp</title>
+    <link rel="stylesheet" href="CSS/register.css">
+    <link rel="shortcut icon" href="/icons/futbol-americano.png" type="icon" />
+</head>
+
+<body>
+
+<section class="izquierda">
+    <h1>¡Regístrate con CanchApp!</h1>
+    <p>Completa los campos para crear tu cuenta</p>
+
+    <form onsubmit="registrar(event)">
+        
+        <label>Nombre de usuario</label>
+        <input type="text" id="usuario" placeholder="Escribe tu usuario">
+
+        <label>Correo electrónico</label>
+        <input type="email" id="correo" placeholder="Escribe tu correo">
+
+        <label>Número de teléfono</label>
+        <input type="text" id="telefono" placeholder="Escribe tu número">
+
+        <label>Contraseña</label>
+        <input type="password" id="password" placeholder="Escribe tu contraseña">
+
+        <label>Confirmar Contraseña</label>
+        <input type="password" id="confirmPassword" placeholder="Confirma tu contraseña">
+
+        <section class="form-options">
+            <label>
+                <input type="checkbox" id="terminos"> Acepto los términos
+            </label>
+        </section>
+
+        <button type="submit">Registrarse</button>
+
+        <nav class="redes">
+            <p>O registrarse con:</p>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Apple"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" alt="Google"></a>
+        </nav>
+
+        <p>¿Ya tienes cuenta? <a href="iniciarsec.html">Iniciar sesión</a></p>
+
+    </form>
+</section>
+
+<section class="derecha">
+    <img src="/img/photo_2024-01-07_11-36-44.jpg" alt="Cancha de fútbol">
+</section>
+
+<script src="js/registrar.js"></script>
+
+</body>
+</html>

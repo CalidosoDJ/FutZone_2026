@@ -1,0 +1,47 @@
+.sidebar {
+    background: #f8fdf9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+header {
+    background: linear-gradient(135deg, #81f165, #3cb371);
+
+}
+.menu-item {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.menu-item.active,
+.menu-item:hover {
+    background: #3cb371;
+    color: #000;
+    font-weight: bold;
+}
+
+.featured {
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("/img/tablon_cancha1.jpg");
+    background-size: cover;
+    background-position: center;
+    border: none;
+    min-height: 300px;
+}
+
+.alert-card {
+    border: 2px solid #1aff00;
+}
+.dropdown-toggle::after {
+    margin-left: 8px;
+}
+
+.dropdown-menu {
+    border-radius: 10px;
+}

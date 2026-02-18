@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de ocupación - CanchApp</title>
+    <link rel="stylesheet" href="CSS/calendario.css">
+</head>
+<body>
+
+    <nav>
+        <a href="homepage.html">Inicio</a>
+        <a href="iniciarsec.html">Iniciar sesión</a>
+        <a href="registrar.html">Registrarse</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="quienes.html">¿Quiénes somos?</a>
+    </nav>
+
+    <main>
+        <header class="calendario-header">
+            <h1>Nombre Cancha</h1>
+            <p>Ubicación: Dirección de la cancha</p>
+            <button id="btn-reservar">Reservar</button>
+        </header>
+
+        <section class="calendario-contenedor">
+            <section class="calendario-panel">
+            <div class="calendario-vista">
+                <label for="select-year">Año:</label>
+                <select id="select-year">
+                <!-- Opciones generadas por JS -->
+                </select>
+
+                <label for="select-month">Mes:</label>
+                <select id="select-month">
+                <!-- Opciones generadas por JS -->
+                </select>
+            </div>
+            
+            <table class="calendario-tabla" aria-label="Calendario de la cancha">
+                <thead>
+                <tr>
+                    <th>Lun</th>
+                    <th>Mar</th>
+                    <th>Mié</th>
+                    <th>Jue</th>
+                    <th>Vie</th>
+                    <th>Sáb</th>
+                    <th>Dom</th>
+                </tr>
+                </thead>
+                <tbody id="dias-mes">
+                <!-- JS llenará los días del mes -->
+                </tbody>
+            </table>
+            </section>
+
+            <!-- Panel derecho: horas disponibles -->
+            <aside class="horas-panel">
+                <h2>Horas disponibles</h2>
+                <ul id="horas-disponibles">
+                    <!-- JS llenará según día seleccionado -->
+                </ul>
+            </aside>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Proyecto CanchApp - Plataforma de reservas deportivas</p>
+        <p>2025 - CanchApp | Todos los derechos reservados</p>
+    </footer>
+
+<!-- Script de interacción-->
+<script src="js/calendario.js"></script>
+
+</body>
+</html>

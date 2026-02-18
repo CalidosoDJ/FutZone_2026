@@ -1,0 +1,107 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* IZQUIERDA */
+section.izquierda {
+  flex: 1;
+  background: #f4f4f4;
+  padding: 20px 35px; /* 🔥 menos padding */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* TÍTULO MÁS PEQUEÑO */
+section.izquierda h1 {
+  color: #00c853;
+  margin: 0 0 5px 0;
+  font-size: 20px; /* 🔥 reducido */
+}
+
+section.izquierda p {
+  margin: 0 0 12px 0;
+  color: #333;
+  font-size: 12px; /* 🔥 reducido */
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* 🔥 menos espacio */
+}
+
+label {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* INPUTS MÁS COMPACTOS */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/* CHECK */
+.form-options {
+  font-size: 11px;
+}
+
+/* BOTÓN MÁS PEQUEÑO */
+button {
+  padding: 9px;
+  border: none;
+  background: #81f165;
+  color: white;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* REDES MÁS PEQUEÑAS */
+nav.redes {
+  margin-top: 8px;
+  text-align: center;
+}
+
+nav.redes p {
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+nav.redes a img {
+  width: 20px;
+  margin: 0 5px;
+}
+
+/* TEXTO FINAL */
+form > p {
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+/* DERECHA */
+section.derecha {
+  flex: 1;
+}
+
+section.derecha img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+

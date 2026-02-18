@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Inicia sesión en CanchApp y disfruta la experiencia del fútbol en línea.">
+  <link rel="stylesheet" href="CSS/iniciarsesi.css">
+  <link rel="shortcut icon" href="/icons/futbol-americano.png" type="icon" />
+  <title>CanchApp Inicio de sesión</title>
+</head>
+
+<body>
+
+  <section class="izquierda">
+    <h1>¡Bienvenidos!</h1>
+    <p>Ingresa y vive la pasión del futbol ⚽</p>
+
+    <form onsubmit="login(event)">
+      <label>Nombre de usuario.</label>
+      <input type="text" id="usuarioLogin" placeholder="Escribe tu usuario">
+
+      <label>Ingrese su contraseña.</label>
+      <input type="password" id="passwordLogin" placeholder="Escribe tu contraseña">
+
+      <p class="contraseña">
+        <label>
+          <input type="checkbox" class="recorderpass"> Recordar contraseña
+        </label>
+
+        <a href="Rcontraseña.html">¿Has olvidado tu contraseña?</a>
+      </p>
+
+      <button type="submit">Iniciar sesión</button>
+
+      <nav class="redes">
+        <p>O continuar con:</p>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Apple"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" alt="Google"></a>
+      </nav>
+    </form>
+  </section>
+
+  <section class="derecha">
+    <img src="/img/photo_2024-01-07_11-36-44.jpg" alt="Cancha de fútbol">
+  </section>
+
+  <script src="js/iniciar_sec.js"></script>
+
+</body>
+
+</html>

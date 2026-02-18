@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/ver_canchas.css">
+  <link rel="shortcut icon" href="icons/futbol-americano.png" type="image/x-icon">
+  <title>Ver Canchas</title>
+</head>
+
+<body>
+
+  <header class="slider">
+    <div class="slides">
+      <img src="img/cancha1.webp" class="active" alt="Cancha 1" id="img1">
+      <img src="img/cancha2.jpeg" alt="Cancha 2" id="img2">
+      <img src="img/canchas3.jpg" alt="Cancha 3" id="img3">
+    </div>
+
+    <button class="prev" id="prev">&#10094;</button>
+    <button class="next" id="next">&#10095;</button>
+
+    <div class="texto-header">
+      <h1>Reserva tu cancha fácil y rápido ⚽</h1>
+      <p>Tu plataforma de reservas seguras y eficientes. Completa los campos para agendar tu cancha.</p>
+    </div>
+  </header>
+
+
+  <main>
+    <section class="formulario">
+      <h2>📌 Agendar Reserva</h2>
+
+      <form id="formReserva">
+
+        <label for="fecha">Fecha</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="hora">Hora</label>
+        <input type="time" id="hora" name="hora" required>
+
+        <label for="tipo">Tipo de Cancha</label>
+        <select id="tipo" name="tipo" required>
+          <option value="">Seleccione...</option>
+          <option value="Fútbol 6">Fútbol 6</option>
+          <option value="Fútbol 8">Fútbol 8</option>
+          <option value="Fútbol 10">Fútbol 10</option>
+        </select>
+
+        <label for="nombre">Nombre Completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" name="correo" placeholder="Ej: correo@gmail.com" required>
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ej: 3101234567" required>
+
+        <button type="submit">Reservar Ahora</button>
+
+        <p id="mensaje" class="mensaje"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 - Reservas de Canchas | Popayán ⚽</p>
+  </footer>
+
+  <script src="js/ver_canchas.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+nav {
+    background: linear-gradient(135deg, #81f165, #3cb371);
+
+}
+.custom-navbar {
+  height: 80px; /* Altura fija */
+}

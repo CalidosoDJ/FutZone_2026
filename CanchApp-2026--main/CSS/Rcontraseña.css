@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center; /* CAMBIO: Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  height: 100vh;
+  margin: 0;
+  
+  /* Tu imagen de fondo se mantiene igual */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                    url(image/Canchas-de-pasto-sintético-980x650.jpg); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h2 {
+  padding: 20px;
+  font-size: 26px;
+  text-align: center;
+  color: white;
+}
+
+form {
+  background-color: white;
+  padding: 30px; /* Un poco más de aire interno */
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra más profunda para resaltar sobre el fondo */
+  
+  min-height: 400px;
+  border: 2px solid #27ae60;
+  
+  /* IMPORTANTE: Quitamos los margin-left/right que lo empujaban a la derecha */
+  margin: 0 auto;
+}
+
+form section {
+  margin-bottom: 30px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+form input[type="email"],
+form input[type="password"],
+form input[type="date"],
+form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #d1d9e6;
+  border-radius: 6px;
+  background-color: #fcfcfc;
+  color: #333;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+form input::placeholder {
+  color: #999;
+}
+
+#pass-visible {
+  display: none;
+}
+#show-pass:checked ~ #nueva {
+  display: none;
+}
+#show-pass:checked ~ #pass-visible {
+  display: block;
+}
+
+form input[type="submit"] {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #27ae60;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  transition:  0.3s ease;
+  box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2);
+}
+
+form input[type="submit"]:hover {
+  background-color: #1a5276; 
+  color: #333;
+}
+
+
+p {
+  color: #555;
+  font-size: 14px;
+  text-align: center;
+}
+
+p a {
+  color: #27ae60;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p a:hover {
+  color: #1a5276;
+}

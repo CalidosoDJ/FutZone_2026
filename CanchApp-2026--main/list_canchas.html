@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/list_canchas.css">
+    <link rel="shortcut icon" href="/icons/futbol-americano.png" type="image/x-icon">
+    <title>Lista de canchas</title>
+</head>
+<body>
+  <header>
+  <div class="header-container">
+    <div class="titulo-header">
+      <h1>Lista de canchas</h1>
+
+      <nav>
+        <a href="homepage.html">Inicio</a> |
+        <a href="calendario.html">Calendario</a> |
+        <a href="mapa.html">Mapa</a> |
+        <a href="#">Noticias</a> |
+        <a href="#">¿Quiénes somos?</a>
+      </nav>
+    </div>
+
+-    <div class="perfil-usuario" id="perfilUsuario">
+      <div class="icono-perfil">👤</div>
+
+      <div class="datos-perfil">
+        <span class="nombre-usuario" id="nombreUsuario">Usuario</span>
+        <span class="rol-usuario" id="rolUsuario">Jugador</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <section class="filtros">
+    <h2>Filtrar cancha</h2>
+    <form> <br>
+      <label>Fecha: 
+        <input type="date"></label><br>
+      <label>Selecciona hora:</label>
+        <input type="time" step="3600"><br>
+      <label for="tipocancha">Tipo de cancha:<label>
+      <select>
+        <option value="8">6 Jugadores</option>
+        <option value="6">8 Jugadores</option>
+        <option value="6">10 Jugadores</option>
+      </select><br>
+      <label>Servicios adicionales: 
+        <input type="text"></label><br>
+      <button type="submit">Aplicar filtros</button>
+    </form>
+  </section>
+
+  <section class="canchas">
+    <h2>Canchas disponibles</h2>
+    <p>Nuestra oferta de canchas sintéticas, comtempla contempla los mejores escenarios para que disfrutes de un buen partido de fútbol con tus amigos, o familiares, realizando tu reserva de cancha, directamente con nosotros.</p>
+
+    <section class="card">
+      <img src="img/cancha1.webp" alt="Cancha sintética" class="imagen">
+
+      <ul class="info">
+        <li><strong>Cancha:</strong> El cubo</li>
+        <li><strong>Zona:</strong> Norte</li>
+        <li><strong>Dirección:</strong> Carrera 9 #N30 - 89</li>
+        <li><strong>Teléfonos:</strong> 
+          <a href="https://web.whatsapp.com/" target="_blank" class="tel">3106021273</a></li>
+        <li><strong>Precio:</strong> 90.000/hora</li>
+        <li class="botones">
+          <button class="reservar"> <a href="ver_canchas.html">Ver | Reservar</a></button>
+          <button class="llegar">Cómo llegar</button>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <img src="img/cancha2.jpeg" alt="Cancha sintética" class="imagen">
+
+      <ul class="info">
+        <li><strong class="titulo">Cancha:</strong> Balón de oro</li>
+        <li><strong>Zona:</strong> Sur</li>
+        <li><strong>Dirección:</strong> Carrera 9 #N30 - 89</li>
+        <li><strong>Teléfonos:</strong> 
+          <a href="https://web.whatsapp.com/" target="_blank" class="tel">3106021273</a></li>
+        <li class="botones">
+          <button class="reservar" > <a href="ver_canchas.html">Ver | Reservar</a></button>
+          <button class="llegar">Cómo llegar</button>
+        </li>
+      </ul>
+    </section>
+    <section class="card">
+      <img src="img/canchas3.jpg" alt="Cancha sintética" class="imagen">
+
+      <ul class="info">
+        <li><strong class="titulo">Cancha:</strong> Las santas</li>
+        <li><strong>Zona:</strong> Norte</li>
+        <li><strong>Dirección:</strong> Carrera 9 #N30 - 89</li>
+        <li><strong>Teléfonos:</strong> 
+          <a href="https://web.whatsapp.com/" target="_blank" class="tel">3106021273</a></li>
+        <li class="botones">
+          <button class="reservar"> <a href="ver_canchas.html">Ver | Reservar </a></button>
+          <button class="llegar">Cómo llegar</button>
+        </li>
+      </ul>
+    </section>
+  
+</section>
+<script src="js/list_canchas.js"></script>
+</body>
+</html>

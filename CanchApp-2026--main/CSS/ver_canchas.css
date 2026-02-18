@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f3f4f6;
+  color: #222;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 100%;
+  height: 65vh;
+  object-fit: cover;
+  display: none;
+  filter: brightness(65%);
+}
+
+.slider img.active {
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 35px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.texto-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 20px;
+  width: 90%;
+}
+
+.texto-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.texto-header p {
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: auto;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: -60px;
+  padding: 20px;
+}
+
+.formulario {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+}
+
+.formulario h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0f7b0f;
+  font-size: 1.8rem;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+form input:focus, form select:focus {
+  border-color: #0f7b0f;
+  box-shadow: 0px 0px 5px rgba(15, 123, 15, 0.4);
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 25px;
+  background: #0f7b0f;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #0c5c0c;
+  transform: scale(1.02);
+}
+
+.mensaje {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+  padding: 15px;
+  background: #0f7b0f;
+  color: white;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .texto-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .texto-header p {
+    font-size: 1rem;
+  }
+
+  .formulario {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis reservas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/mis_reservas.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm custom-navbar">
+        <div class="container">
+
+            <!-- Logo + Nombre -->
+            <a class="navbar-brand d-flex align-items-center fw-bold" href="dashboard.html">
+                <img src="/icons/futzone logo.jpeg" alt="Logo" width="70" height="70" class="me-2 rounded-circle">
+                <span class="text-success fs-4 me-2">FutZone</span>
+            </a>
+            <!-- Botón hamburguesa (móvil) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center gap-lg-3">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="mis_reservas.html">Mis Reservas</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="perfil.html">Perfil</a>
+                    </li>
+                    <div class="dropdown me-3">
+
+                        <button class="btn position-relative" data-bs-toggle="dropdown">
+                            <i class="bi bi-bell fs-5"></i>
+
+                            <!-- Badge contador -->
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                2
+                            </span>
+                        </button>
+
+                        <ul class="dropdown-menu dropdown-menu-end shadow p-2" style="width: 280px;">
+
+                            <li class="dropdown-header fw-bold">
+                                Notificaciones
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item small" href="#">
+                                    ⏰ Tu reserva es hoy a las 6:00 PM
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item small" href="#">
+                                    📅 Mañana tienes reserva en Cancha 2
+                                </a>
+                            </li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item text-center text-success small" href="#">
+                                    Ver todas
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+                    <li class="nav-item ms-lg-3">
+                        <button onclick="goBack()" class="btn btn-success px-4">
+                            ← Volver
+                        </button>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div class="container py-2">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h2 class="fw-bold mb-1">Detalle de la Reserva</h2>
+                <span class="text-muted">ID de reserva: #RSV-98234</span>
+                <span class="badge bg-success ms-2">Confirmada</span>
+                <button class="btn btn-outline-success ms-2" data-bs-toggle="modal" data-bs-target="#resumenModal">
+                    Ver resumen
+                </button>
+            </div>
+
+            <a href="#" class="btn btn-outline-success">
+                <i class="bi bi-arrow-left"></i> Volver
+            </a>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Card Principal -->
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+
+                    <img src="/img/canchas-sintéticas img.jpg" class="img-fluid"
+                        style="height:250px; object-fit:cover;">
+
+                    <div class="card-body p-4">
+
+                        <h4 class="fw-bold">Cancha La Bombonera</h4>
+                        <p class="text-muted mb-3">
+                            <i class="bi bi-geo-alt-fill text-success"></i>
+                            Complejo Deportivo Central, Calle 45 #12-34
+                        </p>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <small class="text-muted">FECHA</small>
+                                <p class="fw-semibold mb-0">Sábado, 24 de Octubre</p>
+                            </div>
+                            <div class="col-md-6">
+                                <small class="text-muted">HORARIO</small>
+                                <p class="fw-semibold mb-0">18:00 a 19:00 (60 min)</p>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="d-flex justify-content-between">
+                            <a href="#" class="text-success fw-semibold text-decoration-none">
+                                <i class="bi bi-map"></i> Ver Ubicación en Mapa
+                            </a>
+                            <a href="#" class="text-secondary text-decoration-none">
+                                <i class="bi bi-share"></i> Compartir
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Cancelación -->
+                <div class="card mt-4 border-danger border-2 rounded-4">
+                    <div class="card-body d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="fw-bold mb-1">¿Deseas anular esta reserva?</h6>
+                            <small class="text-muted">
+                                Cancela con al menos 24 horas de anticipación para reembolso total.
+                            </small>
+                        </div>
+                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#cancelModal">
+                            Cancelar Reserva
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Resumen de Pago -->
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm rounded-4">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-4">Resumen de Pago</h5>
+
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Precio de Cancha</span>
+                            <span>$40.00</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Cargos de Servicio</span>
+                            <span>$5.00</span>
+                        </div>
+
+                        <hr>
+
+                        <div class="d-flex justify-content-between mb-4">
+                            <strong>Total</strong>
+                            <strong class="text-success fs-5">$45.00</strong>
+                        </div>
+
+                        <div class="bg-light rounded-3 p-3 mb-3">
+                            <small class="text-muted d-block mb-1">Método de Pago</small>
+                            <i class="bi bi-credit-card text-success"></i>
+                            Visa •••• 1234
+                        </div>
+
+                        <div class="alert alert-success small mb-0">
+                            <i class="bi bi-envelope-check"></i>
+                            Comprobante enviado a tu correo electrónico.
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="cancelModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4 shadow">
+
+                <div class="modal-body text-center p-4">
+
+                    <!-- Icono -->
+                    <div class="mb-3">
+                        <div class="bg-danger-subtle text-danger rounded-3 p-3 d-inline-block">
+                            ⚠
+                        </div>
+                    </div>
+
+                    <h5 class="fw-bold mb-3">
+                        ¿Estás seguro de cancelar tu reserva?
+                    </h5>
+
+                    <p class="text-muted">
+                        Las cancelaciones realizadas con menos de 24 horas de anticipación
+                        no son reembolsables según nuestras políticas vigentes.
+                        Esta acción es definitiva.
+                    </p>
+
+                    <!-- Botones -->
+                    <div class="d-grid gap-2 mt-4">
+
+                        <button class="btn btn-danger" onclick="confirmCancel()">
+                            Sí, cancelar reserva
+                        </button>
+
+                        <button class="btn btn-light" data-bs-dismiss="modal">
+                            No, volver atrás
+                        </button>
+
+                        <a href="#" class="text-success small">
+                            Ver políticas de reembolso
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="resumenModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow">
+
+                <div class="modal-body p-4">
+
+                    <h5 class="fw-bold mb-3 text-center">
+                        Resumen de la Reserva
+                    </h5>
+
+                    <div class="mb-3">
+                        <small class="text-muted">Cancha</small>
+                        <div class="fw-semibold">Cancha La Bombonera</div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <small class="text-muted">Fecha</small>
+                            <div class="fw-semibold">24 Oct 2024</div>
+                        </div>
+                        <div class="col-6">
+                            <small class="text-muted">Horario</small>
+                            <div class="fw-semibold">18:00 - 19:00</div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="d-flex justify-content-between">
+                        <span>Precio</span>
+                        <span>$40.00</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <span>Servicio</span>
+                        <span>$5.00</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between mt-2">
+                        <strong>Total</strong>
+                        <strong class="text-success">$45.00</strong>
+                    </div>
+
+                    <div class="d-grid mt-4">
+                        <button class="btn btn-success" data-bs-dismiss="modal">
+                            Entendido
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-light py-4 mt-5 border-top">
+        <div class="container text-center">
+            <span class="text-success small">
+                © 2026 ⚽FutZone - Gestión de Canchas Sintéticas Popayán
+            </span>
+        </div>
+    </footer>
+
+    <script>
+        function confirmCancel() {
+            alert("Reserva cancelada correctamente.");
+
+            // Aquí puedes redirigir:
+            // window.location.href = "mis-reservas.html";
+
+            // O enviar a backend con fetch/ajax si usas servidor
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
