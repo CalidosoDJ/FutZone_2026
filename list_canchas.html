@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/icons/futbol-americano.png" type="image/x-icon">
+
+  <title>Lista de canchas</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/list_canchas.css">
+</head>
+
+<body>
+
+  <header class="header-main">
+  <div class="header-container">
+
+    <div class="logo-titulo">
+      <h5 class="mb-0">⚽FutZone</h5>
+      <div class="titulo-header">
+        <h1>Lista de canchas</h1>
+
+        <nav class="menu-nav">
+          <a href="calendario.html">Calendario</a>
+          <a href="mapa.html">Mapa</a>
+          <a href="tb_noticias.html">Noticias</a>
+          <a href="#">¿Quiénes somos?</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="perfil-usuario" id="perfilUsuario">
+      <div class="icono-perfil">👤</div>
+
+      <div class="datos-perfil">
+        <span class="nombre-usuario" id="nombreUsuario">Usuario</span>
+        <span class="rol-usuario" id="rolUsuario">Jugador</span>
+      </div>
+
+      <div class="flecha-perfil">▾</div>
+    </div>
+
+  </div>
+</header>
+
+
+  <!-- BUSCADOR -->
+  <section class="buscador-container">
+    <h2>🔍 Encuentra tu cancha ideal</h2>
+
+    <div class="row g-3">
+      <div class="col-md-6">
+        <input type="text" id="buscarCancha" class="form-control buscador-input" placeholder="Buscar por nombre...">
+      </div>
+
+      <div class="col-md-3">
+        <select id="filtroZona" class="form-select filtro-select">
+          <option value="todas" selected>Zona</option>
+          <option value="norte">Norte</option>
+          <option value="sur">Sur</option>
+          <option value="centro">Centro</option>
+        </select>
+      </div>
+
+      <div class="col-md-3">
+        <select id="filtroPrecio" class="form-select filtro-select">
+          <option value="ninguno" selected>Precio</option>
+          <option value="menor">Menor a mayor</option>
+          <option value="mayor">Mayor a menor</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- LISTA CANCHAS -->
+  <section class="canchas">
+    <h2>Canchas disponibles ⚽</h2>
+    <p>
+      Nuestra oferta de canchas sintéticas contempla los mejores escenarios para que disfrutes un buen partido con tus
+      amigos o familia.
+      Reserva rápido, fácil y seguro.
+    </p>
+
+    <!-- CANCHA 1 -->
+    <section class="card-cancha cancha-item" data-zona="norte" data-precio="90000">
+      <img src="img/elcubo.jpg" alt="Cancha El Cubo">
+
+      <ul class="info">
+        <li><strong>Cancha:</strong> El Cubo</li>
+        <li><strong>Zona:</strong> Norte</li>
+        <li><strong>Dirección:</strong> Carrera 9 #30 - 89</li>
+        <li><strong>Teléfono:</strong> <a href="#" class="tel">3106021273</a></li>
+        <li><strong>Precio:</strong> $90.000 / hora</li>
+
+        <li class="botones">
+          <button class="reservar"><a href="ver_canchas.html">Ver | Reservar</a></button>
+          <button class="llegar">Cómo llegar</button>
+        </li>
+      </ul>
+    </section>
+
+    <!-- CANCHA 2 -->
+    <section class="card-cancha cancha-item" data-zona="sur" data-precio="80000">
+      <img src="img/balon_oro.png" alt="Cancha Balón de Oro">
+
+      <ul class="info">
+        <li><strong>Cancha:</strong> Balón de Oro</li>
+        <li><strong>Zona:</strong> Sur</li>
+        <li><strong>Dirección:</strong> Calle 5 #10 - 12</li>
+        <li><strong>Teléfono:</strong> <a href="#" class="tel">3124587890</a></li>
+        <li><strong>Precio:</strong> $80.000 / hora</li>
+
+        <li class="botones">
+          <button class="reservar"><a href="ver_canchas.html">Ver | Reservar</a></button>
+          <button class="llegar">Cómo llegar</button>
+        </li>
+      </ul>
+    </section>
+
+    <!-- CANCHA 3 -->
+    <section class="card-cancha cancha-item" data-zona="norte" data-precio="100000">
+      <img src="img/las_santas.jpg" alt="Cancha Las Santas">
+
+      <ul class="info">
+        <li><strong>Cancha:</strong> Las Santas</li>
+        <li><strong>Zona:</strong> Norte</li>
+        <li><strong>Dirección:</strong> Avenida 6 #15 - 30</li>
+        <li><strong>Teléfono:</strong> <a href="#" class="tel">3207894561</a></li>
+        <li><strong>Precio:</strong> $100.000 / hora</li>
+
+        <li class="botones">
+          <button class="reservar"><a href="ver_canchas.html">Ver | Reservar</a></button>
+          <button class="llegar">Cómo llegar</button>
+        </li>
+      </ul>
+    </section>
+
+   
+
+      <section class="card-cancha cancha-item" data-zona="centro" data-precio="90000">
+      <img src="img/hugogol.jpg" alt="Canchas Sintéticas HUGOOL">
+      <ul class="info">
+        <li><strong>Cancha:</strong> Canchas Sintéticas HUGOOL</li>
+        <li><strong>Zona:</strong> Centro</li>
+        <li><strong>Dirección:</strong> Carrera 6a #7n-55, Barrio Bolívar</li>
+        <li><strong>Teléfono:</strong> +56 301 555 0328</li>
+        <li><strong>Precio:</strong> $90.000/hora</li>
+        <li class="botones">
+          <button class="reservar"><a href="ver_canchas.html">Ver | Reservar</a></button>
+          <button class="llegar">Cómo llegar</button>
+        </li>
+      </ul>
+    </section>
+
+     <section class="card-cancha cancha-item" data-zona="sur" data-precio="75000">
+      <img src="img/el_campin.jpg" alt="Sintéticas El Campín">
+      <ul class="info">
+        <li><strong>Cancha:</strong> Sintéticas El Campín</li>
+        <li><strong>Zona:</strong> Sur</li>
+        <li><strong>Dirección:</strong> Popayán, Cauca</li>
+        <li><strong>Teléfono:</strong> 312 759 9503</li>
+        <li><strong>Precio:</strong> $75.000/hora</li>
+        <li class="botones">
+          <button class="reservar"><a href="ver_canchas.html">Ver | Reservar</a></button>
+          <button class="llegar">Cómo llegar</button>
+        </li>
+      </ul>
+    </section>
+
+       <section class="card-cancha cancha-item" data-zona="norte" data-precio="80000">
+      <img src="img/brazuca.jpg" alt="Brazuca Canchas Sintéticas y Voleiplaya">
+      <ul class="info">
+        <li><strong>Cancha:</strong> Brazuca Canchas Sintéticas y Voleiplaya</li>
+        <li><strong>Zona:</strong> Norte</li>
+        <li><strong>Dirección:</strong> Vía al Bosque, Tv. 9 Nte. #57n-35</li>
+        <li><strong>Teléfono:</strong> 312 297 1247</li>
+        <li><strong>Precio:</strong> $80.000/hora</li>
+        <li class="botones">
+          <button class="reservar"><a href="ver_canchas.html">Ver | Reservar</a></button>
+          <button class="llegar">Cómo llegar</button>
+        </li>
+      </ul>
+    </section>
+
+  </section>    
+
+  <script src="js/list_canchas.js"></script>
+
+</body>
+
+</html>
