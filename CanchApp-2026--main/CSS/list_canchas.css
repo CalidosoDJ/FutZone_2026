@@ -259,3 +259,19 @@ a{
     flex-direction: column;
   }
 }
+
+.btn-reservar {
+    display: inline-block;
+    background: #48c774;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-right: 10px;
+}
+
+.btn-reservar:hover {
+    background: #2e8b57;
+}

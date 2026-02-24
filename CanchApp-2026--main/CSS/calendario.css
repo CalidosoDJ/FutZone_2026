@@ -184,3 +184,16 @@ footer {
     border-radius: 8px 8px 0 0;
     font-size: 14px;
 }
+
+/* Estilos para día y hora seleccionados */
+.calendario-tabla td.seleccionado {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+}
+
+#horas-disponibles li.seleccionado {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+}
