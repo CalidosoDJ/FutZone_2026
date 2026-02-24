@@ -40,9 +40,9 @@ function cargarResumenReserva() {
         nequiValor.textContent = `$${total.toLocaleString('es-CO')} COP`;
     }
 
-    // Mostrar el resumen
+    // Mostrar el resumen (corregido: usar nombre_cancha en lugar de cancha)
     resumenContainer.innerHTML = `
-        <h5 class="card-title fw-bold text-success">${reserva.cancha || 'Cancha sin nombre'}</h5>
+        <h5 class="card-title fw-bold text-success">${reserva.nombre_cancha || 'Cancha sin nombre'}</h5>
         <hr>
         <div class="mb-3">
             <div class="d-flex justify-content-between mb-2">
@@ -73,7 +73,6 @@ function cargarResumenReserva() {
 // Función para copiar número Nequi
 function copiarAlPortapapeles(texto) {
     navigator.clipboard.writeText(texto).then(() => {
-        // Mostrar notificación Bootstrap (opcional)
         alert('Número copiado al portapapeles');
     }).catch(err => {
         console.error('Error al copiar:', err);
