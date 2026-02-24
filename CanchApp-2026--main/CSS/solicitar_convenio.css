@@ -1,0 +1,17 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #2e8b57;
+}
+
+.card {
+    border-radius: 15px;
+}
+
+.card-header {
+    border-radius: 15px 15px 0 0 !important;
+    font-weight: bold;
+}

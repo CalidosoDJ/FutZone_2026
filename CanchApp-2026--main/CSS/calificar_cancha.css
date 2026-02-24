@@ -1,0 +1,36 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Estilos para las estrellas */
+.estrellas {
+    font-size: 2rem;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.estrella {
+    color: #ddd;
+    transition: color 0.2s;
+    margin: 0 5px;
+}
+
+.estrella:hover,
+.estrella.hover {
+    color: #ffc107;
+}
+
+.estrella.seleccionada {
+    color: #ffc107;
+    font-weight: 900;
+}
+
+/* Animación para el mensaje de éxito */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.alert {
+    animation: fadeIn 0.3s ease;
+}
