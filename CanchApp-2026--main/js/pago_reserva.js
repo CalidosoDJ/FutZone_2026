@@ -29,10 +29,22 @@ function cargarResumenReserva() {
         return;
     }
 
-    // Calcular total (asumiendo precio por hora)
+    // Calcular total (con descuento si existe)
     const precioPorHora = reserva.precio || 45000;
     const horas = reserva.horas || 1;
-    const total = precioPorHora * horas;
+    let total = precioPorHora * horas;
+    let descuentoHTML = '';
+
+    // Si hay descuento aplicado, usamos el total con descuento
+    if (reserva.descuento) {
+        total = reserva.totalConDescuento;
+        descuentoHTML = `
+            <div class="d-flex justify-content-between mb-2 text-success">
+                <span>Descuento (${reserva.descuento.codigo}):</span>
+                <span class="fw-semibold">-$${(precioPorHora * horas - total).toLocaleString('es-CO')} COP</span>
+            </div>
+        `;
+    }
 
     // Actualizar el valor en Nequi si existe
     const nequiValor = document.getElementById('nequi-valor');
@@ -40,7 +52,7 @@ function cargarResumenReserva() {
         nequiValor.textContent = `$${total.toLocaleString('es-CO')} COP`;
     }
 
-    // Mostrar el resumen (corregido: usar nombre_cancha en lugar de cancha)
+    // Mostrar el resumen
     resumenContainer.innerHTML = `
         <h5 class="card-title fw-bold text-success">${reserva.nombre_cancha || 'Cancha sin nombre'}</h5>
         <hr>
@@ -61,6 +73,7 @@ function cargarResumenReserva() {
                 <span class="text-muted">Precio por hora:</span>
                 <span class="fw-semibold">$${precioPorHora.toLocaleString('es-CO')} COP</span>
             </div>
+            ${descuentoHTML}
             <hr>
             <div class="d-flex justify-content-between fw-bold">
                 <span>Total a pagar:</span>
