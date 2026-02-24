@@ -1,0 +1,199 @@
+:root {
+--color-fondo: #f4f6fa;
+--color-azul: darkblue;
+--color-verde: #4caf50;
+--color-gris: #ccc;
+--color-texto: #333;
+--color-texto-claro: white;
+--color-boton: darkblue;
+--color-boton-hover: #8ed7ee;
+--fuente-principal: Arial, sans-serif;
+}
+
+/* Fondo general */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../img/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+/* Barra de navegación */
+nav {
+    background: #48c774; /* Verde principal */
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e8ffe8;
+}
+
+/* Contenido principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Encabezado del calendario */
+.calendario-header {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.calendario-header h1 {
+    color: #2e8b57;
+    margin-bottom: 5px;
+}
+
+.calendario-header p {
+    margin: 5px 0 15px;
+}
+
+#btn-reservar {
+    background: #48c774;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#btn-reservar:hover {
+    background: #3aa663;
+}
+
+/* Contenedor del calendario */
+.calendario-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Panel izquierdo */
+.calendario-panel {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.calendario-vista {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.calendario-vista label {
+    font-weight: bold;
+}
+
+.calendario-vista select {
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Tabla del calendario */
+.calendario-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.calendario-tabla th {
+    background: #48c774;
+    color: white;
+    padding: 10px;
+    border-radius: 6px 6px 0 0;
+}
+
+.calendario-tabla td {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.calendario-tabla td:hover {
+    background: #c3f5c3;
+}
+
+/* Panel de horas */
+.horas-panel {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    width: 250px;
+}
+
+.horas-panel h2 {
+    text-align: center;
+    color: #2e8b57;
+}
+
+.horas-panel ul {
+    list-style: none;
+    padding: 0;
+}
+
+.horas-panel li {
+    background: #e8ffe8;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.horas-panel li:hover {
+    background: #c3f5c3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: rgba(72, 199, 116, 0.95);
+    color: white;
+    padding: 15px 0;
+    margin-top: 40px;
+    border-radius: 8px 8px 0 0;
+    font-size: 14px;
+}
+
+/* Estilos para día y hora seleccionados */
+.calendario-tabla td.seleccionado {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+}
+
+#horas-disponibles li.seleccionado {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+}

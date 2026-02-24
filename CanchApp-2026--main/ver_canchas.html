@@ -11,61 +11,56 @@
 
 <body>
 
-  <header class="slider">
-    <div class="slides">
-      <img src="img/cancha1.webp" class="active" alt="Cancha 1" id="img1">
-      <img src="img/cancha2.jpeg" alt="Cancha 2" id="img2">
-      <img src="img/canchas3.jpg" alt="Cancha 3" id="img3">
+  <div class="contenedor-principal">
+    <!-- Slider de imágenes (lado izquierdo) -->
+    <div class="slider-contenedor">
+      <div class="slider">
+        <div class="slides">
+          <img src="img/cancha1.webp" class="active" alt="Cancha 1" id="img1">
+          <img src="img/cancha2.jpeg" alt="Cancha 2" id="img2">
+          <img src="img/canchas3.jpg" alt="Cancha 3" id="img3">
+        </div>
+        <button class="prev" id="prev">&#10094;</button>
+        <button class="next" id="next">&#10095;</button>
+      </div>
+      <!-- Texto superpuesto al slider (opcional, puedes quitarlo si prefieres) -->
+      <div class="texto-header">
+        <h1>Reserva tu cancha fácil y rápido</h1>
+        <p>Completa tus datos y elige horario</p>
+      </div>
     </div>
 
-    <button class="prev" id="prev">&#10094;</button>
-    <button class="next" id="next">&#10095;</button>
+    <!-- Formulario (lado derecho) -->
+    <div class="formulario-contenedor">
+      <section class="formulario">
+        <h2>Agendar Reserva</h2>
+        <form id="formReserva">
+          <label for="tipo">Tipo de Cancha</label>
+          <select id="tipo" name="tipo" required>
+            <option value="">Seleccione...</option>
+            <option value="Fútbol 6">Fútbol 6</option>
+            <option value="Fútbol 8">Fútbol 8</option>
+            <option value="Fútbol 10">Fútbol 10</option>
+          </select>
 
-    <div class="texto-header">
-      <h1>Reserva tu cancha fácil y rápido ⚽</h1>
-      <p>Tu plataforma de reservas seguras y eficientes. Completa los campos para agendar tu cancha.</p>
+          <label for="nombre">Nombre Completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+
+          <label for="correo">Correo</label>
+          <input type="email" id="correo" name="correo" placeholder="Ej: correo@gmail.com" required>
+
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Ej: 3101234567" required>
+
+          <button type="submit">Reservar Ahora</button>
+          <p id="mensaje" class="mensaje"></p>
+        </form>
+      </section>
     </div>
-  </header>
-
-
-  <main>
-    <section class="formulario">
-      <h2>📌 Agendar Reserva</h2>
-
-      <form id="formReserva">
-
-        <label for="fecha">Fecha</label>
-        <input type="date" id="fecha" name="fecha" required>
-
-        <label for="hora">Hora</label>
-        <input type="time" id="hora" name="hora" required>
-
-        <label for="tipo">Tipo de Cancha</label>
-        <select id="tipo" name="tipo" required>
-          <option value="">Seleccione...</option>
-          <option value="Fútbol 6">Fútbol 6</option>
-          <option value="Fútbol 8">Fútbol 8</option>
-          <option value="Fútbol 10">Fútbol 10</option>
-        </select>
-
-        <label for="nombre">Nombre Completo</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
-
-        <label for="correo">Correo</label>
-        <input type="email" id="correo" name="correo" placeholder="Ej: correo@gmail.com" required>
-
-        <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="Ej: 3101234567" required>
-
-        <button type="submit">Reservar Ahora</button>
-
-        <p id="mensaje" class="mensaje"></p>
-      </form>
-    </section>
-  </main>
+  </div>
 
   <footer>
-    <p>© 2026 - Reservas de Canchas | Popayán ⚽</p>
+    <p>© 2026 - Reservas de Canchas | Popayán</p>
   </footer>
 
   <script src="js/ver_canchas.js"></script>
