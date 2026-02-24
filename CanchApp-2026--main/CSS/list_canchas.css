@@ -275,3 +275,31 @@ a{
 .btn-reservar:hover {
     background: #2e8b57;
 }
+
+/* Asegurar que .card-cancha tenga los mismos estilos que antes tenía .card */
+.card-cancha {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-cancha:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+.card-cancha .imagen {
+  width: 40%;
+  max-width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Mantener el resto de estilos igual */
